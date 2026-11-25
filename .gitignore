@@ -1,0 +1,14 @@
+# Chaves das APIs: NUNCA enviar para o GitHub
+config.properties
+.env
+*.env
+
+# Arquivos gerados na compilação
+out/
+bin/
+*.class
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/launch.json

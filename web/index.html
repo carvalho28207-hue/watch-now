@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B0B0B">
+  <title>Watch Now · Assista Agora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <button class="logo" id="logo" type="button" aria-label="Voltar ao início">WATCH NOW</button>
+  </header>
+
+  <main>
+    <!-- Tela 1: início -->
+    <section id="inicio" class="tela ativa">
+      <p class="selo">Assista Agora</p>
+      <h1>Pare de rolar o catálogo.<br><span class="vermelho">Comece a assistir.</span></h1>
+      <p class="texto">Responda 7 perguntas rápidas e receba os 5 filmes ou séries mais compatíveis com você, no streaming que você já tem.</p>
+      <button class="botao" id="comecar" type="button">Começar</button>
+    </section>
+
+    <!-- Tela 2: perguntas (uma por vez) -->
+    <section id="quiz" class="tela">
+      <div class="progresso"><div class="progresso-barra" id="barra"></div></div>
+      <p class="contador" id="contador"></p>
+      <h2 id="pergunta"></h2>
+      <div class="opcoes" id="opcoes"></div>
+      <button class="link" id="voltar" type="button">← Voltar</button>
+    </section>
+
+    <!-- Tela 3: carregando -->
+    <section id="carregando" class="tela">
+      <div class="giro" aria-hidden="true"></div>
+      <p class="texto centro">Calculando a compatibilidade…</p>
+    </section>
+
+    <!-- Tela 4: resultado -->
+    <section id="resultado" class="tela">
+      <p class="selo">Seu Top 5</p>
+      <h2>Feito para você</h2>
+      <p class="aviso" id="aviso" hidden>Modo demonstração: dados ilustrativos.</p>
+      <ol class="lista" id="lista"></ol>
+      <button class="botao" id="refazer" type="button">Refazer o teste</button>
+    </section>
+
+    <!-- Erro -->
+    <section id="erro" class="tela">
+      <h2>Algo deu errado</h2>
+      <p class="texto" id="erro-texto">Não foi possível falar com o servidor.</p>
+      <button class="botao" id="tentar" type="button">Tentar de novo</button>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p class="tmdb">Dados: TMDB e OMDb</p>
+    <p>Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB. Notas IMDb e Rotten Tomatoes via OMDb.</p>
+    <p>Visual inspirado na Netflix · Projeto acadêmico · João Pedro e Enzo</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
